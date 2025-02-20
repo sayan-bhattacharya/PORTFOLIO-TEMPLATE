@@ -27,6 +27,10 @@ import {
   dcc,
   kelhel,
   microverse,
+  tensorflow,
+  k8s,
+  ai,
+  signal,
 } from '../assets';
 
 export const navLinks = [
@@ -46,16 +50,16 @@ export const navLinks = [
 
 const services = [
   {
-    title: 'Frontend Developer',
-    icon: frontend,
+    title: 'AI Engineer',
+    icon: ai,
   },
   {
     title: 'Backend Developer',
     icon: backend,
   },
   {
-    title: 'UI/UX Design',
-    icon: ux,
+    title: 'Signal Processing Engineer',
+    icon: signal,
   },
   {
     title: 'Software Prototyping',
@@ -85,8 +89,8 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: 'Redux Toolkit',
-    icon: redux,
+    name: 'Kubernetes',
+    icon: k8s,
   },
   {
     name: 'Tailwind CSS',
@@ -97,8 +101,8 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: 'Rails',
-    icon: rubyrails,
+    name: 'Tensorflow',
+    icon: tensorflow,
   },
   {
     name: 'graphql',
@@ -124,32 +128,32 @@ const technologies = [
 
 const experiences = [
   {
-    title: 'Front-End Developer',
-    company_name: 'Cover Hunt',
+    title: 'Backend Developer',
+    company_name: 'Tata Consultancy Service',
     icon: coverhunt,
     iconBg: '#333333',
-    date: 'Aug 2021 - Feb 2022',
+    date: 'Feb 2017 - Feb 2018',
   },
   {
-    title: 'Mentor (Volunteer)',
-    company_name: 'Microverse',
+    title: 'Signal Processing & AI Engineer',
+    company_name: 'IMMS GmbH',
     icon: microverse,
     iconBg: '#333333',
-    date: 'Mar 2022 - May 2022',
+    date: 'Aug 2022 - May 2023',
   },
   {
-    title: 'Junior Software Engineer',
-    company_name: 'Kelhel',
+    title: 'Project Manager & AI Engineer',
+    company_name: 'AiVader GmbH',
     icon: kelhel,
     iconBg: '#333333',
-    date: 'May 2022 - Oct 2022',
+    date: 'May 2023 - Mar 2024',
   },
   {
-    title: 'Full Stack Developer',
-    company_name: 'Diversity Cyber Council',
+    title: 'AI Consultant',
+    company_name: 'Self-employed',
     icon: dcc,
     iconBg: '#333333',
-    date: 'Sep 2022 - Present',
+    date: 'April 2024 - Present',
   },
 ];
 
@@ -173,7 +177,7 @@ const projects = [
       },
     ],
     image: komikult,
-    repo: 'https://github.com/shaqdeff/KomiKult',
+    repo: 'https://github.com/sayan-bhattacharya/AgentRAGroute',
     demo: 'https://shaqdeff.github.io/KomiKult/',
   },
   {

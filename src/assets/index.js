@@ -8,7 +8,10 @@ import logotext from './logo/logo-text-black.png';
 
 import shaq from './personal/shaq.png';
 
+
 import backend from './icons/backend.png';
+import signal from './icons/signal.png';
+import ai from './icons/ai.png';
 import ux from './icons/ux.png';
 import frontend from './icons/frontend.png';
 import prototyping from './icons/prototyping.png';
@@ -25,9 +28,11 @@ import sendHover from './icons/sendHover.png';
 
 import css from './tech/css.png';
 import docker from './tech/docker.png';
+import k8s from './tech/k8s.png';
 import figma from './tech/figma.png';
 import git from './tech/git.png';
 import html from './tech/html.png';
+import tensorflow from './tech/tensorflow.png';
 import javascript from './tech/javascript.png';
 import nodejs from './tech/nodejs.png';
 import reactjs from './tech/reactjs.png';
@@ -96,4 +101,8 @@ export {
   dcc,
   kelhel,
   microverse,
+  tensorflow,
+  k8s,
+  ai,
+  signal,
 };

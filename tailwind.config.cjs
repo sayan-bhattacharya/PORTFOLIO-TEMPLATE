@@ -5,9 +5,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#050816',
-        secondary: '#aaa6c3',
-        tertiary: '#151030',
+        //primary: '#050816',
+        //secondary: '#aaa6c3',
+        //tertiary: '#151030',
+        primary: "#050816",
+        secondary: "#aaa6c3",
+        tertiary: "#151030",
+        taupe: "#9CA3AF",
+        jetLight: "#1d1836",
         'black-100': '#100d25',
         'black-200': '#090325',
         'white-100': '#f3f3f3',
@@ -22,7 +27,7 @@ export default {
         french: '#b5b5ba',
         night: '#141414',
         jet: '#292929',
-        jetLight: '#333333',
+        //jetLight: '#333333',
         jetGray: '#6d6d74',
         richBlack: '#2e2e2e',
         eerieBlack: '#1f1f1f',
@@ -61,8 +66,14 @@ export default {
         overcameBold: ['Overcame Bold'],
         overcameOutline: ['Overcame Outline'],
         poppins: ['Poppins', 'sans-serif'],
+        spaceMono: ['Space Mono', 'monospace'],
+        jetBrains: ['JetBrains Mono', 'monospace'],
       },
     },
   },
+  darkMode: 'class',
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
   plugins: [],
 };

@@ -25,8 +25,8 @@ const Hero = () => {
         className="relative flex sm:flex-row flex-col w-full h-screen mx-auto 
         sm:bg-hero bg-hero-mobile overflow-hidden">
         <div
-          className={`absolute inset-0 sm:top-[250px] top-[150px] 
-          lg:top-[150px] xl:top-[250px] ${styles.paddingX} 
+          className={`absolute inset-0 sm:top-[150px] top-[100px] 
+          lg:top-[100px] xl:top-[150px] ${styles.paddingX} 
           max-w-7xl mx-auto flex flex-row items-start
           justify-between gap-3`}>
           <div className="flex flex-col justify-center items-center mt-5 ml-3">
@@ -36,18 +36,23 @@ const Hero = () => {
 
           <div>
             <h1
-              className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase`}>
+              className={`${styles.heroHeadText} text-eerieBlack font-spaceMono uppercase tracking-tighter`}>
               Hi, I'm{' '}
               <span
                 className="sm:text-battleGray sm:text-[90px] 
-                text-eerieBlack text-[50px] font-mova
-                font-extrabold uppercase">
-                Shaquille
+                text-eerieBlack text-[50px] font-spaceMono
+                font-extrabold uppercase tracking-tight">
+                Sayan
               </span>
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              Lorem ipsum dolor sit amet. <br className="sm:block hidden" />
-              consectetur adipisicing elit deleniti, voluptas.
+            <p className={`${styles.heroSubText} mt-1 text-eerieBlack font-jetBrains tracking-wide leading-relaxed max-w-[3000px]`}>
+              Hello, I'm Sayan Bhattacharya - a Machine Learning Engineer transforming ideas into intelligent solutions. <br className="sm:block hidden" />
+              Specializing in production ML systems and deep learning. <br className="sm:block hidden" />
+          
+            </p>
+            <p className={`${styles.heroSubText} mt-3 text-eerieBlack font-jetBrains tracking-wide leading-relaxed max-w-[3000px]`}>
+            Building scalable AI solutions <br className="sm:block hidden" />
+            with MLOps that make an impact.<br className="sm:block hidden" />
             </p>
           </div>
           <div
@@ -80,14 +85,13 @@ const Hero = () => {
           </a>
         </div>
 
-        {/* Your image comes here. Feel free to remove image if you don't plan to have one.*/}
         <div>
           <img
             className="absolute bottom-0 ml-[50vw] 
             lg:ml-[75vw] md:ml-[60vw] xmd:ml-[60vw] 2xl:ml-[83vw]
             sm:h-[90vh] md:h-[70vh] xl:h-[80vh]"
             src={shaq}
-            alt="shaquille"
+            alt="sayan"
           />
         </div>
       </section>
