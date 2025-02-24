@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import './timeline.css'; 
 
 @tailwind base;
 @tailwind components;
@@ -6,12 +7,12 @@
 
 @font-face {
   font-family: 'Arenq';
-  src: url('./fonts/arenq.otf');
+  src: url('/fonts/arenq.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Mova';
-  src: url('./fonts/mova.otf');
+  src: url('/fonts/mova.otf') format('opentype');
 }
 .ai-icon-large {
   transform: scale(2);
@@ -19,7 +20,7 @@
 }
 @font-face {
   font-family: 'Beckman';
-  src: url('./fonts/beckman.otf');
+  src: url('/fonts/beckman.otf') format('opentype');
 }
 .card-gradient {
   background: linear-gradient(
@@ -34,12 +35,12 @@
 }
 @font-face {
   font-family: 'Overcame Bold';
-  src: url('./fonts/overcame-bold.woff');
+  src: url('/fonts/overcame-bold.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Overcame Outline';
-  src: url('./fonts/overcame-outline.woff');
+  src: url('/fonts/overcame-outline.woff') format('woff');
 }
 
 * {

@@ -9,8 +9,9 @@ const Tech = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubTextLight}>My skills</p>
-        <h2 className={styles.sectionHeadTextLight}>Technologies.</h2>
+        <h2 className="text-timberWolf font-jetBrains text-[45px] tracking-tighter mb-3">
+          Technical Expertise & Tools
+        </h2>
       </motion.div>
 
       <div className="flex flex-wrap justify-center gap-10 mt-14">

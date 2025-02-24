@@ -1,32 +1,24 @@
-FROM --platform=linux/amd64 node:18-alpine AS builder
+FROM node:18-alpine
 
 WORKDIR /app
 
-# Install dependencies first
+# Copy package files
 COPY package*.json ./
-RUN npm install --legacy-peer-deps
+COPY next.config.js ./
+COPY .eslintrc.json ./
 
-# Copy rest of the application
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the application
 COPY . .
 
-# Build application
+# Build the application
 RUN npm run build
 
-# Production image
-FROM --platform=linux/amd64 node:18-alpine AS runner
-
-WORKDIR /app
-
-# Copy built assets
-COPY --from=builder /app/package*.json ./
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/node_modules ./node_modules
-
-ENV NODE_ENV=production
-ENV PORT=8080
-ENV HOSTNAME="0.0.0.0"
-
+# Expose the port
+ENV PORT 8080
 EXPOSE 8080
 
+# Start the application
 CMD ["npm", "start"]

@@ -1,10 +1,11 @@
 // src/components/About.jsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { styles } from '../styles';
+
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
+import { styles } from '../styles';  // This should work now
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -67,12 +68,47 @@ const WaitlistForm = () => {
   );
 };
 
+// Add the new NewtonsCradle component
+const NewtonsCradle = () => {
+  return (
+    <motion.div className="flex justify-center items-center h-[180px] mt-4">
+      <div className="relative w-[250px] h-[180px] transform scale-[0.85]">
+        {[...Array(5)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute left-1/2 top-0 w-[24px] h-[180px] origin-top"
+            style={{
+              transform: `translateX(${(i - 2) * 26}px)`,
+            }}
+            animate={i === 0 ? {
+              rotate: ['-30deg', '0deg', '-30deg'],
+            } : i === 4 ? {
+              rotate: ['0deg', '30deg', '0deg'],
+            } : {}}
+            transition={{
+              duration: 1.8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: i === 0 ? 0 : 0.9,
+              repeatDelay: 0.2
+            }}
+          >
+            <div className="absolute bottom-0 w-[24px] h-[24px] rounded-full bg-black/90 shadow-lg" />
+            <div className="absolute top-0 left-1/2 w-[1.5px] h-full bg-black/80 transform -translate-x-1/2" />
+          </motion.div>
+        ))}
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-black/80" />
+      </div>
+    </motion.div>
+  );
+};
+
 const About = () => {
   return (
     <div className="-mt-[6rem]">
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} font-jetBrains tracking-tight`}>Introduction</p>
-        <h2 className={`${styles.sectionHeadText} font-jetBrains tracking-tighter`}>Overview.</h2>
+        <p className="text-eerieBlack font-jetBrains text-[18px] tracking-tight">Introduction</p>
+        <h2 className="text-eerieBlack font-jetBrains text-[35px] tracking-tighter">Overview.</h2>
       </motion.div>
 
       <div className="flex flex-col lg:flex-row justify-between items-start gap-10 mt-5">
@@ -84,7 +120,10 @@ const About = () => {
           Proficient in Python, PyTorch, and major cloud platforms, I leverage my background in Communications and Signal Processing to bridge theory and application. I specialize in GenAI and RAG systems, focusing on building efficient, scalable ML solutions that deliver measurable impact.
         </motion.p>
 
-        <WaitlistForm />
+        <div className="flex flex-col">
+          <WaitlistForm />
+          <NewtonsCradle />
+        </div>
       </div>
 
       <div className="mt-20 flex flex-wrap gap-10">
@@ -95,5 +134,4 @@ const About = () => {
     </div>
   );
 };
-
 export default SectionWrapper(About, 'about');

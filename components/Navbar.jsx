@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+"use client";
+import { useState } from 'react';
+import Link from 'next/link'; // Changed from react-router-dom
+import Image from 'next/image';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-import { close, menu, logo, logotext } from '../assets';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -14,26 +15,30 @@ const Navbar = () => {
       top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh]`}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
-          to="/"
+          href="/" // Changed 'to' to 'href' for Next.js
           className="flex items-center gap-2"
           onClick={() => {
             setActive('');
             window.scrollTo(0, 0);
           }}>
-          <img
-            src={logo} // your logo comes here
+          <Image
+            src="/logo/logo-black.png" // Using correct path from your structure
             alt="sayan"
+            width={50}
+            height={50}
             className="sm:w-[50px] sm:h-[50px] w-[45px] h-[45px] object-contain"
           />
 
-          {/* if you have text you want besides your logo it comes here.
-          Otherwise delete this if you don't need it. */}
-          <img
-            src={logotext}
+          <Image
+            src="/logo/logo-text-black.png" // Using correct path from your structure
             alt="logo"
+            width={90}
+            height={90}
             className="sm:w-[90px] sm:h-[90px] w-[85px] h-[85px] -ml-[0.6rem] object-contain"
           />
         </Link>
+
+        {/* Desktop Navigation */}
         <ul className="list-none hidden sm:flex flex-row gap-14 mt-2">
           {navLinks.map((nav) => (
             <li
@@ -48,7 +53,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* mobile */}
+        {/* Mobile Navigation */}
         <div className="sm:hidden flex flex-1 w-screen justify-end items-center">
           {toggle ? (
             <div
@@ -57,10 +62,12 @@ const Navbar = () => {
                   toggle ? 'menu-open' : 'menu-close'
                 }`}>
               <div className="flex justify-end">
-                <img
-                  src={close}
+                <Image
+                  src="/icons/close.png" // Using correct path from your structure
                   alt="close"
-                  className="w-[22px] h-[22px] object-contain cursor-pointer"
+                  width={22}
+                  height={22}
+                  className="object-contain cursor-pointer"
                   onClick={() => setToggle(!toggle)}
                 />
               </div>
@@ -85,10 +92,12 @@ const Navbar = () => {
               </ul>
             </div>
           ) : (
-            <img
-              src={menu}
+            <Image
+              src="/icons/menu.png" // Using correct path from your structure
               alt="menu"
-              className="w-[34px] h-[34px] object-contain cursor-pointer"
+              width={34}
+              height={34}
+              className="object-contain cursor-pointer"
               onClick={() => setToggle(!toggle)}
             />
           )}

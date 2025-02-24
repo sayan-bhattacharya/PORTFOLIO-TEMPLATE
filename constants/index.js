@@ -1,37 +1,40 @@
-import {
-  frontend,
-  backend,
-  ux,
-  prototyping,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  git,
-  figma,
-  docker,
-  postgresql,
-  rubyrails,
-  graphql,
-  komikult,
-  leaderboard,
-  math,
-  movie,
-  nyeusi,
-  space,
-  coverhunt,
-  dcc,
-  kelhel,
-  microverse,
-  tensorflow,
-  k8s,
-  ai,
-  signal,
-} from '../assets';
+// Define paths for all assets
+const frontend = '/icons/frontend.png';
+const backend = '/icons/backend.png';
+const ux = '/icons/ux.png';
+const prototyping = '/icons/prototyping.png';
+const javascript = '/tech/javascript.png';
+const typescript = '/tech/typescript.png';
+const html = '/tech/html.png';
+const css = '/tech/css.png';
+const reactjs = '/tech/reactjs.png';
+const redux = '/tech/redux.png';
+const tailwind = '/tech/tailwind.png';
+const nodejs = '/tech/nodejs.png';
+const git = '/tech/git.png';
+const figma = '/tech/figma.png';
+const docker = '/tech/docker.png';
+const postgresql = '/tech/postgresql.png';
+const rubyrails = '/tech/rubyrails.png';
+const graphql = '/tech/graphql.png';
+const tensorflow = '/tech/tensorflow.png';
+const k8s = '/tech/k8s.png';
+const ai = '/icons/ai.png';
+const signal = '/icons/signal.png';
+
+// Project images
+const komikult = '/projects/komikult.png';
+const leaderboard = '/projects/leaderboard.png';
+const math = '/projects/math-magicians.png';
+const movie = '/projects/movie-metro.png';
+const nyeusi = '/projects/nyeusi.png';
+const space = '/projects/space-hub.png';
+
+// Company logos
+const coverhunt = '/company/coverhunt.png';
+const dcc = '/company/dcc.png';
+const kelhel = '/company/kelhel.png';
+const microverse = '/company/microverse.png';
 
 export const navLinks = [
   {
@@ -183,8 +186,7 @@ const projects = [
   {
     id: 'project-2',
     name: 'Leaderboard',
-    description:
-      'A leaderboard list app that displays scores submitted by different players.',
+    description: 'A leaderboard list app that displays scores submitted by different players.',
     tags: [
       {
         name: 'react',
@@ -250,8 +252,7 @@ const projects = [
   {
     id: 'project-5',
     name: 'Nyeusi Fest Site',
-    description:
-      'This is a demo concert website for a music festival called Nyeusi.',
+    description: 'This is a demo concert website for a music festival called Nyeusi.',
     tags: [
       {
         name: 'nextjs',

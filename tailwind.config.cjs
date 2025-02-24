@@ -1,17 +1,18 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+module.exports = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   mode: 'jit',
   theme: {
     extend: {
+          
       colors: {
-        //primary: '#050816',
-        //secondary: '#aaa6c3',
-        //tertiary: '#151030',
         primary: "#050816",
         secondary: "#aaa6c3",
         tertiary: "#151030",
-        taupe: "#9CA3AF",
+        taupe: "#9999a1", // removed duplicate taupe definition
         jetLight: "#1d1836",
         'black-100': '#100d25',
         'black-200': '#090325',
@@ -20,14 +21,12 @@ export default {
         platinum: '#e6e6e9',
         platinumLight: '#f4f4f5',
         timberWolf: '#d4d4d8',
-        taupe: '#9999a1',
         silver: '#d6d6d6',
         dim: '#66666e',
         battleGray: '#858585',
         french: '#b5b5ba',
         night: '#141414',
         jet: '#292929',
-        //jetLight: '#333333',
         jetGray: '#6d6d74',
         richBlack: '#2e2e2e',
         eerieBlack: '#1f1f1f',
@@ -48,16 +47,12 @@ export default {
         '3xl': '1800px',
       },
       backgroundImage: {
-        about:
-          'linear-gradient(165deg, rgba(244,244,246,1) 100%, rgba(122,122,122,1) 100%)',
-        experience:
-          "linear-gradient(135deg, rgba(244,244,246,0.5) 60%, rgba(10,10,10,0.2) 100%),url('/src/assets/backgrounds/white-abstract.png')",
-        experienceLight:
-          'linear-gradient(137deg, rgba(244,244,246,0.5) 60%, rgba(10,10,10,0.9) 60%)',
+        about: 'linear-gradient(165deg, rgba(244,244,246,1) 100%, rgba(122,122,122,1) 100%)',
+        experience: "linear-gradient(135deg, rgba(244,244,246,0.5) 60%, rgba(10,10,10,0.2) 100%),url('/backgrounds/white-abstract.png')",
+        experienceLight: 'linear-gradient(137deg, rgba(244,244,246,0.5) 60%, rgba(10,10,10,0.9) 60%)',
         hero: 'linear-gradient(135deg, rgba(244,244,246,0.8) 60%, rgba(10,10,10,0.95) 60%)',
-        'hero-mobile':
-          'linear-gradient(137deg, rgba(244,244,246,0.8) 60%, rgba(10,10,10,1) 60%)',
-        tech: "linear-gradient(165deg, rgba(20,20,20,0.8) 100%, rgba(109,109,116,0.8) 100%), url('/src/assets/backgrounds/nairobi.png')",
+        'hero-mobile': 'linear-gradient(137deg, rgba(244,244,246,0.8) 60%, rgba(10,10,10,1) 60%)',
+        tech: "linear-gradient(165deg, rgba(20,20,20,0.8) 100%, rgba(109,109,116,0.8) 100%), url('/backgrounds/nairobi.png')"
       },
       fontFamily: {
         arenq: ['Arenq'],
@@ -65,15 +60,13 @@ export default {
         mova: ['Mova'],
         overcameBold: ['Overcame Bold'],
         overcameOutline: ['Overcame Outline'],
-        poppins: ['Poppins', 'sans-serif'],
         spaceMono: ['Space Mono', 'monospace'],
         jetBrains: ['JetBrains Mono', 'monospace'],
+        poppins: ['Poppins', 'sans-serif'],
       },
+      
     },
   },
   darkMode: 'class',
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')]
 };
